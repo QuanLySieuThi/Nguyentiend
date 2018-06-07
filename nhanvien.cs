@@ -150,7 +150,7 @@ namespace Quản_lý_bán_hàng
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             frmMain fnv = new frmMain();
             fnv.ShowDialog();
             this.Close();
