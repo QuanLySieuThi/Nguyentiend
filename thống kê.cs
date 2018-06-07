@@ -21,7 +21,7 @@ namespace Quản_lý_bán_hàng
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             frmMain ftk = new frmMain();
             ftk.ShowDialog();
             this.Close();
