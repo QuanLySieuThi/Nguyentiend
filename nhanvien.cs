@@ -140,12 +140,18 @@ namespace Quản_lý_bán_hàng
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
+        	try{
             string sqlxoa = "Delete from tblNhanVien where maNV= @maNV";
             SqlCommand cmd = new SqlCommand(sqlxoa, conn);  // đọc lệnh
             cmd.Parameters.AddWithValue("maNV", txtmaNV.Text);
             cmd.ExecuteNonQuery();
             if (MessageBox.Show("Bạn chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Hienthi();
+                } 
+                catch
+                {
+                	MessageBox.Show("Không thể xóa","Thông tin",MessageBoxButtons.Ok,MessageBoxIcon.Error);
+                }
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
