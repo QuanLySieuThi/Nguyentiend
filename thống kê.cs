@@ -34,6 +34,7 @@ namespace Quản_lý_bán_hàng
 
         private void formTK_Load(object sender, EventArgs e)
         {
+        	conn.Open();
             Hienthi();
         }
         private void Hienthi()
